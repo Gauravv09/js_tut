@@ -34,3 +34,30 @@ const myFunction = function(){
 
 console.log(typeof outsideTemp); // object
 console.log(typeof myFunction); //   object Function , non primitves ka data type object hi bola jata hai
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++=
+
+// Stack (Primitive) , Heap (Non-Primitive)
+// Jab bhi stack memory use hoti hai then jo bhi variable declare kra hoga uski copy generate hoti hai
+// Jab bhi Heap memory use hoti hai to waha se reference milta hai original value ka 
+
+let myYoutubeName = "GauravChoudharydotcom"
+
+let anotherName = myYoutubeName
+anotherName = "Chaiaurcode"
+console.log(myYoutubeName); 
+console.log(anotherName);
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "Gaurav@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
