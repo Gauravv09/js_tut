@@ -32,3 +32,33 @@ let score2 = 200
 let score3 = 300
 
 console.log(Array.of(score1, score2, score3));
+
+
+//**********************Warning****************
+
+/*  If you use named indexes, JavaScript will redefine the array to an object.
+
+After that, some array methods and properties will produce incorrect results.
+
+const person = [];
+person["firstName"] = "John";
+person["lastName"] = "Doe";
+person["age"] = 46;
+person.length;     // Will return 0
+person[0];         // Will return undefined */
+
+
+
+
+/* const points = [40]; is not same as const points = new Array(40);
+second one will This code creates a new array with a length of 40, but all the elements in the array will be initially empty (undefined).
+and first in  one This code creates a new array with one element, which is the number 40. */
+
+
+
+
+
+
+
+
+
