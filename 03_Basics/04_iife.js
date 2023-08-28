@@ -2,10 +2,10 @@
 // IIFE Can be names or unamed.
 // Jaise hi function likhe , turant hi excute krwana ho + Global scope ki pollution rokne ke liye.
 
-(function chai(){
+/* (function chai(){
     console.log(`DB CONNECTED`);
 })() 
-
+ */
 // First() was for function defn and second() was for execution.
 
 // can also write iife as arrow function:
@@ -18,7 +18,8 @@
 (function chai() {
         console.log(`DB CONNECTED TWO`);
     }
-)() // But this also gives error , because iife invoke to hogya but usko pata nhi hai context rokna kaha hai. so add;. */
+)() // But this also gives error , because iife invoke to hogya but usko pata nhi hai context rokna kaha hai
+kyuki code mai ek se zyada iife aagye. so add;. */
 
 /*  (
     () => {
