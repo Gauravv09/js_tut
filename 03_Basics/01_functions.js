@@ -27,7 +27,7 @@ addTwoNumbers(3, null) // 3 */
 
 // storing functions value in some literal
 /* const result = addTwoNumbers(3, 5)
-console.log("Result: ", result); // undefined , kyuki function kuch return ni krra tha */
+console.log("Result: ", result); // undefined , kyuki function kuch return ni krra tha bs print krra tha */
 
 
 function addTwoNumbers(number1, number2){
@@ -38,4 +38,67 @@ function addTwoNumbers(number1, number2){
 
 const result = addTwoNumbers(3, 5)
 // console.log("Result: ", result);
+
+
+
+/* function loginUserMessage(username){
+    if(username === undefined){ // condition could be even !username
+        console.log("Please enter a username: "); 
+        return //ye return execute hogya to baaki ka kuch niche likha kaam nhi krega , even second return bhi nahi.
+    }
+    return `${username} just logged in `
+}
+console.log(loginUserMessage("Gaurav")); // Gaurav just logged in 
+console.log(loginUserMessage("")); //just logged in 
+console.log(loginUserMessage()); // undefined just logged in  */
+
+/* function loginUserMessage(username = "sam"){
+    if(!username){ // condition could be even !username
+        console.log("Please enter a username: "); 
+        return //ye return execute hogya to baaki ka kuch niche likha kaam nhi krega , even second return bhi nahi.
+    }
+    return `${username} just logged in `
+}
+
+console.log(loginUserMessage("Gaurav")); // Gaurav just logged in 
+console.log(loginUserMessage("")); //sam just logged in 
+console.log(loginUserMessage()); // undefined just logged in  */
+
+// How to solve this problem? so that we would be able to take multiple inputs from user for some func.
+// by using rest operator ... , ... is also called spread operator based on their use cases.
+// it will return an array by bundling all the values provided.
+/* function calculateCartPrice(...num1){
+    return num1
+}
+console.log(calculateCartPrice(200, 400, 500)); // [ 200, 400, 500 ] */
+
+// one more case
+function calculateCartPrice(val1, val2, ...num1){
+    return num1
+}
+// console.log(calculateCartPrice(200, 400, 500)); // [ 500 ]
+
+const user = {
+    username: "Gaurav",
+    price: 199
+}
+
+function handleObject(anyObject){
+    console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`); 
+}
+
+// handleObject(user) //Username is Gaurav and price is 199
+// Or directly pass the object
+handleObject({
+    username: "sam",
+    price: 399
+}) // Username is sam and price is 399
+
+const myNewArray = [200, 400, 100, 600]
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+//console.log(returnSecondValue(myNewArray)); // 400
+// or pass an array  directly to a func.
+console.log([200, 400, 100, 1000]);
 

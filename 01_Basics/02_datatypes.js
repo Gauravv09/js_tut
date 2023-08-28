@@ -14,7 +14,7 @@ let isLoggedIn = false
 // number => 2 to power 53
 // bigint
 //string => ""
-//boolean => true/false
+//boolean => true/false , by default js mai undefined aur "" false hai
 //null => standalone value , representation of empty value
 //undefined
 // symbol
