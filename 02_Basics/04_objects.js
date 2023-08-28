@@ -62,3 +62,42 @@ console.log(Object.entries(tinderUser)); // array ke andar har ek key value pair
 console.log(tinderUser.hasOwnProperty('isLogged')); //false
 console.log(tinderUser.hasOwnProperty('isLoggedIn')); //true
 
+// Object de structuring
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "Gaurav"
+}
+
+// course.courseInstructor ki jagah ye bhi kr skte ho :
+/* const {courseInstructor} = course
+console.log(courseInstructor); */
+// you can even change the keys name according to your convienencie and still do same thing.
+const {courseInstructor: instructor} = course
+console.log(instructor);
+
+/* 
+A JSON object contains zero, one, or more key-value pairs, also called properties. The object is surrounded by curly braces {}.
+{
+    name: "Gaurav",
+    "coursename": "js in hindi",
+    "price": "free"
+}
+
+
+*/
+
+// kai baar apis object ki format ki jagah array ki format mai bhi milti hai jisme kai saare objects ho
+
+/* 
+[
+    {},
+    {},
+    {}
+]
+
+
+*/
+
+
+// randomsuerme most general api , json formatter
