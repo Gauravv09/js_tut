@@ -89,6 +89,7 @@ function addone(num){
     return num + 1
 }
 
+//hoisting concept.
 console.log(addTwo(5)); // But yaha error fekega,  Cannot access 'addTwo' before initialization
 const addTwo = function (num) {
     return num + 2
