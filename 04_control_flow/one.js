@@ -70,3 +70,42 @@ if (loggedInFromGoogle || loggedInFromEmail ) {
     console.log("User logged in");
 }
 
+
+
+// Nullish Colescing Operator (??): null undefined
+
+let val1;
+val1 = 5 ?? 10
+console.log(val1); // 5
+// to fir ?? ka fayda kya? 
+// kai baar kya hota hai , jab aap database se call krenge to directly response nhi milta hai,
+// balki do values milti hai , chances hai uske null response ya undefined (response aaye hi na) aane ke,
+// ?? is problem ko solve krta hai. ki jab null ya undefined response to kya karo.
+
+// How? ?? checks safety for null and undefined value for a program.
+let val2;
+/* val2 = null ?? 10
+console.log(val2); // 10
+
+var1 = undefined ?? 15
+console.log(var1); // 15
+
+var2 = null ?? 10 ?? 15 // aise case mai pehli value assign hojati hai mtlb 10
+console.log(var2); // 10 */
+
+
+// ternary Operator
+
+// condtion ? true : false
+
+/* const iceTeaPrice = 100
+iceTeaPrice <= 80 ? console.log("less than 80") : console.log("more than 80"); // less than 80 */
+
+
+
+
+
+
+
+
+
