@@ -1,5 +1,5 @@
 // for
-
+// If you omit expression 2, you must provide a break inside the loop. Otherwise the loop will never end. This will crash your browser. 
 /* for (let index = 0; index <= 10; index++) {
     const element = index
     console.log(element);

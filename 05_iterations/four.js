@@ -31,6 +31,10 @@ const programming = ["js", "rb", "py", "java", "cpp"]
 //2
 //3
 //4
+// so , Do not use for in over an Array if the index order is important.
+// It is better to use a for loop, a for of loop, or Array.forEach() when the order is important. In case of Arrays.
+
+
 
 
 // to get values

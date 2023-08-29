@@ -1,4 +1,4 @@
-// for of loop , to iterate over arrays , maps but doesnt work for objects.
+// for of loop , to iterate over arrays , maps, strings . NodeLists but doesnt work for objects.
 
 /* for (const iterator of object) {
     
@@ -17,7 +17,10 @@ for (const greet of greetings) {
     console.log(`Each char is ${greet}`);
 } */
 
-// Maps , objects having unique values
+/* Maps: 
+A Map holds key-value pairs where the keys can be any datatype.
+A Map remembers the original insertion order of the keys. */
+
 
 /* const map = new Map()
 map.set('IN', "India")
@@ -57,3 +60,43 @@ for (const [key, value] of myObject) {
 
 
 
+
+// ************************** Misc about Maps **********************
+
+/* 
+Essential Map Methods:
+new Map()  Creates a new Map
+set()      Sets the value for a key in a Map
+get()      Gets the value for a key in a Map
+delete()   Removes a Map element specified by the key
+has()      Returns true if a key exists in a Map
+forEach()  Calls a function for each key/value pair in a Map
+entries()  Returns an iterator with the [key, value] pairs in a Map
+
+Property:
+size       Returns the number of elements in a Map
+
+ */
+
+
+/* 
+// Create a Map
+const fruits = new Map();
+
+// Set Map Values
+fruits.set("apples", 500);
+fruits.set("bananas", 300);
+fruits.set("oranges", 200);
+
+fruits.get("apples");    // Returns 500
+
+fruits.delete("apples");
+
+Differences between JavaScript Objects and Maps:
+Object                                   Map
+Not directly iterable                    Directly iterable
+Do not have a size property              Have a size property
+Keys must be Strings (or Symbols)        Keys can be any datatype
+Keys are not well ordered                Keys are ordered by insertion
+Have default keys                        Do not have default keys
+*/

@@ -1,6 +1,8 @@
 /* while (condition) {
     
 } */
+
+// If you forget to increase the variable used in the condition, the loop will never end. This will crash your browser.
 /* let i = 0
 while (i <= 10) {
     console.log(`value of i is ${i}`);
