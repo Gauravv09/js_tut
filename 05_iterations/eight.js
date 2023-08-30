@@ -49,3 +49,6 @@ const shoppingCart = [
 // to get bill using reduce method.
 /* const priceToPay = shoppingCart.reduce( (acc, item) => acc + item.price, 0 )
 console.log(priceToPay); */ // 22996
+
+
+
