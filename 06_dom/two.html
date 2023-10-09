@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class=""bg-black">
+    <div >
+        <h1 id ="title" class = "heading">DOM learning on this Repository</h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">One</li>
+            <li class="list-item">Two</li>
+            <li class="list-item">Three</li>
+            <li class="list-item">Four</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+
+<!-- in console:
+     document.getElementById("title"), <h1 id=​"title" class=​"heading">​ DOM learning on this Repository ​</h1>​
+document.getElementById('title').id, 'title'
+document.getElementById('title').class, undefined
+document.getElementById('title').className, 'heading' 
+
+document.getElementById('title').getAttribute, ƒ getAttribute() { [native code] }
+document.getElementById('title').getAttribute(), error
+
+Thats why give some parameter in getAttribute()
+document.getElementById('title').getAttribute('id'), 'title'
+document.getElementById('title').getAttribute('class'), 'heading'
+
+
+document.getElementById('title').setAttribute('class', 'test'), dikhayega undefined lekin element mai class ki value overwrite krdiya hai
+check that inside element.
+
+
+const title = document.getElementById('title'), undefined but basically title variable mai title id ka element store kara diya.
+now to do styling on that element:
+title.style.backgroundColor = "green", 'green'
+title.style,padding = "15px", '15px'
+title.style.borderRadius = "15px", '15px'
+
+
+Element se content bhi nikaal skte hai, basically uska text wala content jiske kai tarike hai which gives same value:
+title.textContent, 'DOM learning on this Repository'            '
+title.innerHTML, 'DOM learning on this Repository'            '
+title.innerText, 'DOM learning on this Repository'
+
+Difference?
+go to above code of page and create span element in h1 element like this:
+<span>test text</span>
+now:
+title.textContent, 'DOM learning on this Repository test text'
+title.innerHTML, 'DOM learning on this Repository <span>test text</span>'
+title.innerText, 'DOM learning on this Repository test text'
+
+innerText(only visible content) vs textContent(saara content)
+span element mai add style="display:none;"
+title.innerText, 'DOM learning on this Repository'
+title.textContent, 'DOM learning on this Repository test text'
+
+
+
+document.getElementsByClassName('heading'), gives html collection
+
+
+
+query selectors:(css selectors kaam krte hai isme)
+to get first h2 element
+document.querySelector('h2'), iska pura element ajayega
+document.querySelector('input[type="password"]'), <input type=​"password" name id>​
+
+
+const myul = document.querySelector('ul'), undefined
+const turnGreen = myul.querySelector('li'), undefined
+turnGreen.style.backgroundColor = "green", 'green'
+
+turnGreen.innerText, 'One'
+turnGreen.innerText = "Five",'Five'
+
+
+To get all elements who are a list item
+document.querySelectorAll('li'), NodeList(3) [li, li, li] ye bhi pure array nahi hai although forEach available hai isme but not map.
+const tempList = document.querySelectorAll('li'), undefined
+tempList.style.color = "green", error kyuki hai to aakhir ek array jaisa so use indexes
+tempList[2].style.color = "green", 'green'
+
+
+tempList.forEach(function (l) {
+    l.style.backgroundColor = "green"
+}) // pura list ki bkc green hojayega
+
+
+
+
+
+document.getElementsByClassName("list-item"), ye htmlcollection dega
+
+cant apply forEach on html collection, so you cant iterate over so you need to convert into an array for that.
+const tempClassList = document.getElementsByClassName('list-item')
+const myConvertedArray = Array.from(tempClassList)
+
+
+
+
+
+-->
