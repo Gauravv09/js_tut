@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+             <!-- 1st approach not a good approach onclick="alert('owl')" inside html element -->
+            <li><img width="200px" id="owl"  src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // 2nd approach 
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+
+     // attachEvent() ek approach ye bhi tha purane zamane mai
+    // jQuery - on 
+
+
+
+
+    // 3rd approach : isme third parameter by default false set rehta hai. (Best approach)
+    /* document.getElementById('owl').addEventListener('click', function(){
+        alert("owl clicked again")
+    })
+     */
+
+     // event object: e
+/*   document.getElementById('images').addEventListener('click', function(e){
+         console.log(e); // pointerEvent object mai kaafi properties(events basically) milengi
+         console.log("clicked inside the ul");
+     }, false) */
+
+/*  some important events:
+    type, timestamp, defaultPrevented(kisi bhi tag ka default behaviour rokne ke liye)
+    target, toElement, srcElement, currentTarget,
+    clientX, clientY, screenX, screenY
+    altkey, ctrlkey, shiftkey, keyCode */
+
+
+// Understanding event propagation:
+// bubbling (bottom to top)( set to false)
+
+     /* document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the url"); // prints whenever click on an image
+     }, false)
+
+     document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked"); // prints whenever click on owl image specifically
+     }, false) */
+
+
+     // lekin jab owl ko click kroge to owl ul ke andar haia so ul bhi activate hona chahiye. top wala code bhi activate hona chahiye mtlb.
+     // pehle kya print hoga fir? if you click on any image except owl to clicked inside url ayega
+     // owl pe click kiya to pehle owl clicked aur then clicked inside the url ayega print hoke. this is bubbling.
+
+     // event capturing(top to bottom) (set to true)
+
+/*      document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the url"); // prints whenever click on an image
+     }, true)
+
+     document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked"); // prints whenever click on owl image specifically
+     }, true) */
+
+     // ab owl pe click kiya to clicked inside thr url and then owl clciked. this is event capturing.
+
+
+
+
+/*      document.getElementById('owl').addEventListener('click', function(e){
+         console.log("owl clicked"); 
+         e.stopPropagation() // stops event bubbling or capturing.top to bottom ya bottom to top ka scene nhi hoga.
+     }, false) */
+    
+
+/*      document.getElementById('google').addEventListener('click',function(e){
+         e.preventDefault();
+         e.stopPropagation();
+         console.log("google clicked");
+     }, false) */
+   
+
+     // image pe click krke gayab krna:
+    // getElementById krke ek ek element pakadne se acha pura tag pakad lo, kaunsa event track krre h? click event
+    document.querySelector('#images').addEventListener('click', function(e){
+        // console.log(e.target.parentNode); // parentNode select krke hi to pura tag hata paoge. 
+        console.log(e.target.tagName); // event.target mtlb kaunse target id se ye event occur hora hai
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove() // or //removeIt.parentNode.removeChild(removeIt)
+        }
+    
+        
+    })
+    
+    
+</script>
+</html>
