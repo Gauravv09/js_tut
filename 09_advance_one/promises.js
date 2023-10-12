@@ -123,3 +123,11 @@ fetch('https://jsonplaceholder.typicode.com/users')
 .catch((error) => console.log(error)) */
 
 
+
+/* 
+Important point:
+fetch ke liye alag queue hoti hai known as fetch queue/ microtask queue/ priority queue.
+fetch se jo bhi kaam hota hai callback queue mai aata hai , so ye priority mai sbse pehle execute hoga.
+
+
+*/
