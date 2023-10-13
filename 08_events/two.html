@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS and Fun</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    
+    /* setTimeout(function () {
+        console.log("Gaurav");
+    }, 2000) */ // 2 second ke time ke baad 1 baari execute hoga 
+
+
+    // You can do the same thing like this as well
+    /* const sayGaurav = function(){
+        console.log("Gaurav");
+    }
+    
+    setTimeout(sayGaurav, 2000); */
+
+    // To change text value after 2 seconds
+    /* const changeText = function () {
+        document.querySelector('h1').innerHTML = "Best it is"
+    }
+
+    const changMe = setTimeout(changeText, 2000) */
+
+    // roke kaise? using clearTimeout by giving it reference of which setTimeout to stop
+    // clearTimeout(changMe) // ab changMe execute hi ni hoga , not a good way.
+
+
+    // Better way to do that:
+    /* document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changMe)
+        console.log("STOPPED");
+    }) */ // change hone se pehle stop button pe clcik kroge to change nhi hoga ab text.
+
+
+    // to continously do something for a specific interval of time
+    /* setInterval(function(){
+        console.log("Gaurav", Date.now());
+    }) */
+
+
+
+    // you can do one more thing , you can pass parameters as well using setInterval
+    /* const sayDate = function (str) {
+        console.log(str, Date.now());
+    }
+
+    const intervalId = setInterval(sayDate, 1000, "Gaurav"); */
+
+    // setInterval kon rokne ke liye clearInterval hai jisme us setInterval ka reference dena hoga.
+    // clearInterval(intervalId)
+
+
+
+</script>
+</html>
