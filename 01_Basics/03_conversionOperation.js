@@ -1,11 +1,11 @@
 /* let score = null
 
 console.log(typeof(score));
-console.log(typeof score);
+console.log(typeof score); // in both cases object
 
 let valueInNumber = Number(score)
 console.log(typeof valueInNumber);
-console.log(valueInNumber)
+console.log(valueInNumber) // numnber in both cases
 
 // "33" => 33
 // "33abc" => NaN
@@ -34,7 +34,7 @@ console.log(typeof stringNumber); */
 
 let value = 3
 let negvalue = -value
-// console.log(negvalue);
+// console.log(negvalue); // -3
 
 /* console.log(2+2);
 console.log(2-2);
@@ -47,7 +47,7 @@ let str1 = "hello"
 let str2 = "Gaurav"
 
 let str3 = str1 + str2
-console.log(str3);
+console.log(str3); // helloGaurav
 
 /* console.log("1" + 2);
 console.log(1 + "2");

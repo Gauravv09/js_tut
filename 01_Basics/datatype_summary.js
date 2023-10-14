@@ -61,3 +61,8 @@ userTwo.email = "Gaurav@google.com"
 console.log(userOne.email);
 console.log(userTwo.email);
 
+
+/* In JavaScript, null is a primitive value that represents the intentional absence of any object value. 
+It is often used to signify a deliberate non-value or the absence of an object where one is expected. 
+Unlike undefined, which indicates a variable that has not been assigned a value, 
+null is typically used as an explicit way to indicate the absence of an object or the absence of a meaningful value. */

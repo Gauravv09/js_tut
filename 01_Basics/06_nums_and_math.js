@@ -1,15 +1,16 @@
 const score = 400
-console.log(score);
+console.log(typeof score); // number
 
 const balance = new Number(100)
-console.log(balance);
-
+console.log(balance); // [Number: 100]
+const str_balance = balance.toString(); 
+console.log(typeof str_balance); // string
 console.log(balance.toString().length);
-console.log(balance.toFixed(2)); // after . no of digits
+console.log(balance.toFixed(2)); // 100.00, after . two tak round off
 
 const otherNumber = 23.8966
 
-console.log(otherNumber.toPrecision(3)); //total kitne digits pe focus krna hai
+console.log(otherNumber.toPrecision(3)); //23.9,  kitne digits pe focus krna hai
 
 const num = 123.8966
 
